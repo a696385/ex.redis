@@ -1,4 +1,4 @@
 ex.redis
 ========
 
-Extend functions for redis.io
+Functions for work with redis like mongodb. And sync mongo with redis.
