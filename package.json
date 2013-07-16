@@ -1,0 +1,28 @@
+{
+  "name": "ex.redis",
+  "version": "0.0.1",
+  "description": "Extend Redis.io functions",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/a696385/ex.redis.git"
+  },
+  "keywords": [
+    "redis.io",
+    "store"
+  ],
+  "author": "andy@away.name",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/a696385/ex.redis/issues"
+  },
+  "dependencies": {
+    "redis": "~0.8.4",
+    "async": "~0.2.9",
+    "should": "~1.2.2",
+    "mongodb": "~1.3.11"
+  }
+}
