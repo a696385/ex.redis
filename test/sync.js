@@ -6,6 +6,16 @@ var redis = require('redis'),
 
 var MongoClient = require('mongodb').MongoClient;
 
+var transform = function(key, doc, type){
+    //mongo -> redis
+    if (type === 0){
+        doc.__key = key;
+    } else {
+
+    }
+    return doc;
+};
+
 MongoClient.connect('mongodb://127.0.0.1:27017/test', function(err, db) {
     exRedis.mongo.sync({
         db: db,
@@ -15,7 +25,7 @@ MongoClient.connect('mongodb://127.0.0.1:27017/test', function(err, db) {
         connection: rc,
         collection: 'test',
         defaultVersion : 0
-    }, function(err, count, fromTo){
+    }, transform, function(err, count, fromTo){
         if (err){
             console.error(err);
         } else {
