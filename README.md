@@ -73,7 +73,7 @@ exRedis.write(rc, 'test_collection', '51e512352cb6640403695121', {
   exRedis.version(rc, 'test_collection', function(err, version){});
 ```
 
-### Set version of collection
+### Set version of document collection
 ```javascript
   exRedis.setVersion(rc, 'test_collection', versionValue, function(err, version){});
 ```
@@ -93,6 +93,6 @@ Sync collections between mongo and redis
   }, function(err, count, fromTo){}); 
 ```
 
-`count` - count of transfered documents
+`count` - count of transferred documents
 
 `fromTo` - side of transfer, may be `mongodb -> redis`, `redis -> mongodb` or `none` if versions is same
