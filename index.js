@@ -7,3 +7,5 @@ exports.mongo = {
     sync: mongoSync.sync,
     incVersion: mongoSync.incVersion
 };
+
+exports.utils = require('./lib/utils')
